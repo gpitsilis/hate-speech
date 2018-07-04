@@ -3,6 +3,7 @@ Useful information for re-producing the experiment documented in the report:
 Pitsilis G.K, Ramampiaro, H., Langseth, H., “Detecting Offensive Language in Tweets Using Deep Learning”, 2018/1/13, arXiv preprint arXiv:1801.04433. https://arxiv.org/pdf/1801.04433
 
 Software requirements:
+----------------------
 
 a) keras (version 1.2.2)
 b) tensorflow
@@ -12,6 +13,7 @@ e) q text toolkit (provisionally) from: http://harelba.github.io/q/
 f) access to linux shell
 
 Published source code files:
+----------------------------
 
 classifier.py
 tok_lib.py
@@ -31,7 +33,8 @@ run_results.sh
 run_results_3_ensemble.sh
 run_results_5_ensemble.sh
 
-The process of running the experiment step-by-step:
+Running the experiment step-by-step:
+------------------------------------
 
 1) Install moses decoder toolkit that can be found at: http://www.statmt.org/moses/?n=Development.GetStarted
 Once moses is installed, you will need to replace the full path of the tokenizer.perl file in tok_lib.py with the one pointing to the location where the  script is installed in your hard disk.
