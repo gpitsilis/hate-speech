@@ -9,7 +9,7 @@ b) tensorflow
 c) python 2.7x
 d) moses decoder
 e) q text toolkit (provisionally) from: http://harelba.github.io/q/
-e) access to linux shell
+f) access to linux shell
 
 Published source code files:
 
