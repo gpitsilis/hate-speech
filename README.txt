@@ -132,3 +132,13 @@ run_results_5_ensemble.sh
 This script combines together the output produced by the scripts in step 5. The performance figure of the ensemble (includes the F-score) is send to the standard output ( standard console ).
 
 Contact information: georgios.pitsilis@gmail.com
+
+If you use this work in academic research with published results, please cite this paper, or use the following Bibtex:
+
+@article{Pitsilis2018DetectingOL,
+  title={Detecting Offensive Language in Tweets Using Deep Learning},
+  author={Georgios K. Pitsilis and Heri Ramampiaro and Helge Langseth},
+  journal={CoRR},
+  year={2018},
+  volume={abs/1801.04433}
+}
