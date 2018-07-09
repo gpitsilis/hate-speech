@@ -7,3 +7,14 @@ Pitsilis G.K, Ramampiaro, H., Langseth, H., “Detecting Offensive Language in T
 Instructions and detailed information can be found at: README.txt
 
 Contact information: georgios.pitsilis@gmail.com
+
+If you use this work in academic research with published results, please cite this paper, or use the following Bibtex:
+
+@article{Pitsilis2018DetectingOL,
+  title={Detecting Offensive Language in Tweets Using Deep Learning},
+  author={Georgios K. Pitsilis and Heri Ramampiaro and Helge Langseth},
+  journal={CoRR},
+  year={2018},
+  volume={abs/1801.04433}
+}
+
