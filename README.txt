@@ -54,7 +54,7 @@ Also, the input data must be provided in 3 separate files, one for each class, w
 "tweets_hate_speech_sexism.csv",
 "tweets_hate_speech_racism.csv".
 
-Also important to note is that the number of records to be read from each class file must be declared into the source code file (classifier.py), by setting the proper values in the following 3 variables:
+Also note that the number of records to be read from each class file must be declared in the source code file (classifier.py), by setting the proper values in the following 3 variables:
 load_none_train   = <number of records to read from the neutral tweets>
 load_racism_train = <number of records to read from racism tweets>
 load_sexism_train = <number of records to read from sexism tweets>
