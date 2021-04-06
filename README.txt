@@ -10,7 +10,7 @@ Software requirements:
 a) keras (version 1.2.2)
 b) tensorflow
 c) python 2.7x
-d) moses decoder
+d) moses decoder ( only the part related to tokenization )
 e) q text toolkit (provisionally) from: http://harelba.github.io/q/
 f) access to linux shell
 
