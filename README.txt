@@ -77,7 +77,7 @@ The various user features to be included into the training data must be provided
 <user_id>,<label>,<ratio value>
 The acceptable values for the <label> field are: “none”, “racism” or “sexism”.
 
-The contents of the above file can be generated out from the existing data files. The following helper scripts running in the linux shell prompt, ( requite the q text toolkit to be installed ) can used for that:
+The contents of the above file can be generated out from the existing data files. The following helper scripts running in the linux shell prompt, ( requite the q text toolkit to be installed ) can used for that purpose:
 
 
 $ cat tweets_hate_speech_none.csv tweets_hate_speech_sexism.csv tweets_hate_speech_racism.csv > tweets_hate_speech.csv
