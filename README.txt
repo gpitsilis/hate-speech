@@ -1,4 +1,4 @@
-Useful information for re-producing the experiment documented in the reports:
+Useful information for re-producing the experiment documented in the reports cited as:
 
 Pitsilis, G.K, Ramampiaro, H., Langseth, H., “Detecting Offensive Language in Tweets Using Deep Learning”, 2018/1/13, arXiv preprint arXiv:1801.04433. https://arxiv.org/pdf/1801.04433
 
