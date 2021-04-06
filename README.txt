@@ -100,7 +100,7 @@ run_loop_NS.sh  : This is for running the experiment with the inclusion of 'Neut
 run_loop_O.sh : This is for running the experiment with no  inclusion of any user-based features.
 run_loop_RS.sh : This is for running the experiment with the inclusion of 'Racism' and 'Sexism' user-based features alone.
 
-In the above scripts every experiment is set to run for 15 times in total. (The number can be changed by modifying the script)
+In the above scripts every experiment is set to run for 15 times in total. (The number of times can be changed by doing the proper alterations in the script)
 
 
 6) Compute the performance of every single classifier by running the following script in the linux prompt:
