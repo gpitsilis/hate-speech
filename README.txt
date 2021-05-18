@@ -41,7 +41,7 @@ Running the experiment step-by-step:
 1) Install moses decoder toolkit that can be found at: http://www.statmt.org/moses/?n=Development.GetStarted
 Once moses is installed, you will need to replace the full path of the tokenizer.perl file in tok_lib.py with the one pointing to the location where the  script is installed in your hard disk.
 
-2) Acquire the hate-speech dataset. It can be taken from the address indicated in the following publication:
+2) Acquire the hate-speech dataset. It can be taken from the link advertised in the following publication:
 
 Zeerak Waseem and Dirk Hovy, Hateful symbols or hateful people? predictive features for hate speech detection on twitter. In Proceedings of the NAACL Student Research Workshop, San Diego, California, June 2016. Association for Computational Linguistics.
 
@@ -49,7 +49,7 @@ Note that the input data files must be provided in the proper csv format, with e
 The <label> should be either "none", "sexism" or "racism".
 e.g.: 5878947239423749,none,"Hello world"
 
-Also, the input data must be provided in 3 separate files, one for each class, with filenames:
+Also, the input data aquired from the above file must be converted and provided in 3 separate files, one for each class, with the followinf filenames:
 "tweets_hate_speech_none.csv",
 "tweets_hate_speech_sexism.csv",
 "tweets_hate_speech_racism.csv".
@@ -61,16 +61,16 @@ load_sexism_train = <number of records to read from sexism tweets>
 
 If you wish to use different filenames for the input data files, then you should modify the content of the input_file variable in the ht_lib.py file accordingly.
 
-Trying the code on a dataset with different size, will requite doing the proper modifications to these lines accordingly:
+Trying the code on a dataset with different size, will require doing the proper modifications to these lines accordingly:
 
 load_none_train    = <number of neutral profiles>
 load_racism_train  =  <number of racism  profiles>
 load_sexism_train  =  <number of sexism  profiles>
 
 3) Provide the user_ids.
-The tweet ids used in the dataset, along with the ids of the users posted those tweets must also be included into a separate file called 'hate_speech_tweets_users.csv'. Every line in that file must be structured like: <tweetID>,<userID>
+The tweet ids used in the dataset, along with the ids of the users posted those tweets must also be included into a separate file with name: 'hate_speech_tweets_users.csv'. Every line in that file must be structured like: <tweetID>,<userID>
 
-The userIDs can be retrieved by crawling the hate-speech dataset in twitter, given the tweet_ids.  You can use your own s/w for crawling twitter and retrieving the above information.
+The userIDs can be retrieved by crawling the hate-speech dataset in twitter, given the tweet_ids. You can use your own s/w for the crawling task on twitter and retrieve the above information.
 
 4) Provide the user-related features.
 The various user features to be included into the training data must be provided into a separate file with name: user_class_ratio.csv in the following format:
