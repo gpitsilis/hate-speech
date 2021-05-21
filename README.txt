@@ -59,7 +59,7 @@ load_none_train   = <number of records to read from the neutral tweets>
 load_racism_train = <number of records to read from racism tweets>
 load_sexism_train = <number of records to read from sexism tweets>
 
-If you wish to use different filenames for the above input data files, then you should modify the content of the 'input_file' variable in 'ht_lib.py' accordingly.
+If you wish to use different filenames for the above input data files, then you will need to modify the content of the 'input_file' variable in 'ht_lib.py' accordingly.
 
 If you wish to try the code on the dataset with different number of records for racism/sexism/neutral, then you will need to modify these lines accordinlgy, giving the proper values:
 
