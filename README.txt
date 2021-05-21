@@ -39,11 +39,13 @@ Running the experiment step-by-step:
 ------------------------------------
 
 1) Install moses decoder toolkit that can be found at: http://www.statmt.org/moses/?n=Development.GetStarted
-Once moses is installed, you will need to replace the full path of the tokenizer.perl file in tok_lib.py with the one pointing to the location where the  script is installed in your hard disk.
+Once moses is installed, you will need to replace the full path of the tokenizer.perl file in tok_lib.py with the one pointing to the location 
+where the  script is installed in your hard disk.
 
 2) Acquire the hate-speech dataset. It can be taken from the link advertised in the following publication:
 
-Zeerak Waseem and Dirk Hovy, Hateful symbols or hateful people? predictive features for hate speech detection on twitter. In Proceedings of the NAACL Student Research Workshop, San Diego, California, June 2016. Association for Computational Linguistics.
+Zeerak Waseem and Dirk Hovy, Hateful symbols or hateful people? predictive features for hate speech detection on twitter. In Proceedings of the NAACL 
+Student Research Workshop, San Diego, California, June 2016. Association for Computational Linguistics.
 
 Note that the input data files must be provided in the proper csv format, with each line structured like: <tweeter_ID>,<label>,<textual_content>
 The <label> should be either "none", "sexism" or "racism".
@@ -54,30 +56,36 @@ Also, the input data aquired from the above file must be converted and provided 
 "tweets_hate_speech_sexism.csv",
 "tweets_hate_speech_racism.csv".
 
-Also note that the number of records to be read from each class file is hardcoded in the source code file (classifier.py). As such, the proper values in the following 3 variables must be set:
+Also note that the number of records to be read from each class file is hardcoded in the source code file (classifier.py). As such, the proper 
+values in the following 3 variables must be set:
 load_none_train   = <number of records to read from the neutral tweets>
 load_racism_train = <number of records to read from racism tweets>
 load_sexism_train = <number of records to read from sexism tweets>
 
-If you wish to use different filenames for the above input data files, then you will need to modify the content of the 'input_file' variable in 'ht_lib.py' accordingly.
+If you wish to use different filenames for the above input data files, then you will need to modify the content of 
+the 'input_file' variable in 'ht_lib.py' accordingly.
 
-If you wish to try the code on the dataset with different number of records for racism/sexism/neutral, then you will need to modify these lines accordinlgy, giving the proper values:
+If you wish to try the code on the dataset with different number of records for racism/sexism/neutral, then you will need to modify these lines 
+accordinlgy, giving the proper values:
 
 load_none_train    =  <number of neutral profiles>
 load_racism_train  =  <number of racism  profiles>
 load_sexism_train  =  <number of sexism  profiles>
 
 3) Provide the user_ids.
-The tweet ids used in the dataset, along with the ids of the users which have posted those tweets must also be included into a separate file with name: 'hate_speech_tweets_users.csv'. Every line in that file must be structured like: <tweetID>,<userID>
+The tweet ids used in the dataset, along with the ids of the users which have posted those tweets must also be included into a separate file with name: 
+'hate_speech_tweets_users.csv'. Every line in that file must be structured like: <tweetID>,<userID>
 
-The userIDs can be retrieved by crawling the hate-speech dataset in twitter, given the tweet_ids. You may use your own software solution for crawling on twitter and retrieve the above information.
+The userIDs can be retrieved by crawling the hate-speech dataset in twitter, given the tweet_ids. You may use your own software solution for crawling on 
+twitter and retrieve the above information.
 
 4) Provide the user-related features.
 The various user features to be included into the training data must be provided into a separate file with name: user_class_ratio.csv in the following format:
 <user_id>,<label>,<ratio value>
 The acceptable values for the <label> field are: “none”, “racism” or “sexism”.
 
-The contents of the above file can be generated out from the existing data files. The following helper scripts running in the linux shell prompt can used for that purpose ( requires the installation of the q text toolkit ):
+The contents of the above file can be generated out from the existing data files. The following helper scripts running in the linux shell prompt can 
+used for that purpose ( requires the installation of the q text toolkit ):
 
 
 $ cat tweets_hate_speech_none.csv tweets_hate_speech_sexism.csv tweets_hate_speech_racism.csv > tweets_hate_speech.csv
@@ -118,26 +126,30 @@ NRS.csv_result.out  for Neutral,Sexism,Racism features included
 $ run_results_3_ensemble.sh
 This script combines together the output produced by the scripts in step 5.
 
-The performance figure of every ensemble is recorded into a file with filename denoting the classifiers used as input to that ensemble. The filename has the form: mixfile_<classifier1>_<classifier2>_<classifier3>csv_result.out.
+The performance figure of every ensemble is recorded into a file with filename denoting the classifiers used as input to that ensemble. 
+The filename has the form: mixfile_<classifier1>_<classifier2>_<classifier3>csv_result.out.
 e.g.: mixfile_O_NSR_NS.csv_result.out is referred to the result of the ensemble the has the following 3 inputs:
 
 i)   No-user-features
 ii)  Neutra,Sexism and Racism features
 iii) Neutral and Sexism features
 
-In total, 10 output files will be produced ( as many as the ensembles in the published document ) containing the various metrics associated with the performance, such as the F-score. The later is marked as: 'Combined classifiers F:' in the above files.
+In total, 10 output files will be produced ( as many as the ensembles in the published document ) containing the various metrics associated 
+with the performance, such as the F-score. The later is marked as: 'Combined classifiers F:' in the above files.
 
 
 8) Compute the performance of the 5-input ensemble by running the script:
 run_results_5_ensemble.sh
 
-This script combines together the output produced by the scripts in step 5. The performance figure of the ensemble (includes the F-score) is send to the standard output ( standard console ).
+This script combines together the output produced by the scripts in step 5. The performance figure of the ensemble (includes the F-score) 
+is send to the standard output ( standard console ).
 
 Contact information: georgios.pitsilis@gmail.com
 
 If you use this work for academic research with published results, we will be grateful if you cite the following paper:
 
-Pitsilis, G.K., Ramampiaro, H., & Langseth, H. (2018),"Effective hate-speech detection in Twitter data using recurrent neural networks", Applied Intelligence, 48(12), 4730-4742.
+Pitsilis, G.K., Ramampiaro, H., & Langseth, H. (2018),"Effective hate-speech detection in Twitter data using recurrent neural networks", 
+Applied Intelligence, 48(12), 4730-4742.
 
 in bibtext format:
 
