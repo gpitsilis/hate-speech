@@ -54,16 +54,16 @@ Also, the input data aquired from the above file must be converted and provided 
 "tweets_hate_speech_sexism.csv",
 "tweets_hate_speech_racism.csv".
 
-Also note that the number of records to be read from each class file is hardcoded in the source code file (classifier.py). As such the proper values in the following 3 variables must be set:
+Also note that the number of records to be read from each class file is hardcoded in the source code file (classifier.py). As such, the proper values in the following 3 variables must be set:
 load_none_train   = <number of records to read from the neutral tweets>
 load_racism_train = <number of records to read from racism tweets>
 load_sexism_train = <number of records to read from sexism tweets>
 
-If you wish to use different filenames for the input data files, then you should modify the content of the input_file variable in ht_lib.py accordingly.
+If you wish to use different filenames for the above input data files, then you should modify the content of the "input_file" variable in "ht_lib.py" accordingly.
 
-Trying the code on a dataset with different size, will require doing the proper modifications to these lines accordingly:
+If you wish to try the code on the dataset with different number of records for racism/sexism/neutral, then you will need to modify these lines accordinlgy, giving the proper values:
 
-load_none_train    = <number of neutral profiles>
+load_none_train    =  <number of neutral profiles>
 load_racism_train  =  <number of racism  profiles>
 load_sexism_train  =  <number of sexism  profiles>
 
