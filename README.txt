@@ -49,17 +49,17 @@ Note that the input data files must be provided in the proper csv format, with e
 The <label> should be either "none", "sexism" or "racism".
 e.g.: 5878947239423749,none,"Hello world"
 
-Also, the input data aquired from the above file must be converted and provided in 3 separate files, one for each class, with the followinf filenames:
+Also, the input data aquired from the above file must be converted and provided in 3 separate files, one for each class, with the following names:
 "tweets_hate_speech_none.csv",
 "tweets_hate_speech_sexism.csv",
 "tweets_hate_speech_racism.csv".
 
-Also note that the number of records to be read from each class file must be declared in the source code file (classifier.py), by setting the proper values in the following 3 variables:
+Also note that the number of records to be read from each class file is hardcoded in the source code file (classifier.py). As such the proper values in the following 3 variables must be set:
 load_none_train   = <number of records to read from the neutral tweets>
 load_racism_train = <number of records to read from racism tweets>
 load_sexism_train = <number of records to read from sexism tweets>
 
-If you wish to use different filenames for the input data files, then you should modify the content of the input_file variable in the ht_lib.py file accordingly.
+If you wish to use different filenames for the input data files, then you should modify the content of the input_file variable in ht_lib.py accordingly.
 
 Trying the code on a dataset with different size, will require doing the proper modifications to these lines accordingly:
 
